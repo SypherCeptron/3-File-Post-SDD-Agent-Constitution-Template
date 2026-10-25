@@ -8,16 +8,16 @@ It solves a common problem in AI-assisted projects: **how to capture what the AI
 
 ## 1. What Are the 3 Files?
 
-1. **[`AGENT.md`](./AGENT.md) — The Constitution (Hard Project Law)**
+1. **[`constitution/AGENT.md`](./constitution/AGENT.md) — The Constitution (Hard Project Law)**
    - Read by the AI at the **start of every task**.
    - Contains the governance rules and 3 core shards (*Tech Stack & Commands*, *Source Tree & Boundaries*, *Non-Obvious Coding Standards*).
    - **Strict Gatekeeping:** Only accepts cross-cutting rules proven across **2+ specs** (`Seen >= 2`) or critical architectural boundaries. Capped at 150 lines.
 
-2. **[`PARKED.md`](./PARKED.md) — The Incubator & Waiting Room**
+2. **[`constitution/PARKED.md`](./constitution/PARKED.md) — The Incubator & Waiting Room**
    - Read by the AI **before planning a new spec** and **during post-spec triage**.
    - Holds reusable patterns that have only been seen **once** (`Seen: 1/2`) while waiting to see if they repeat in a future spec, plus deferred architectural rules and demoted/archived rules.
 
-3. **[`UNFILTERED-AGENT.md`](./UNFILTERED-AGENT.md) — The Post-SDD Inbox**
+3. **[`constitution/UNFILTERED-AGENT.md`](./constitution/UNFILTERED-AGENT.md) — The Post-SDD Inbox**
    - Written by the AI **immediately after finishing a spec implementation**.
    - Captures raw *Spec vs. Reality Deviations*, *Debug Friction*, and *Discovered Codebase Quirks* before they are triaged.
 
@@ -25,11 +25,11 @@ It solves a common problem in AI-assisted projects: **how to capture what the AI
 
 ## 2. Step-by-Step: Setting Up in Another AI Project
 
-### Step 1: Copy the 3 Files into Your Project Root
-Copy `AGENT.md`, `PARKED.md`, and `UNFILTERED-AGENT.md` into the root folder of your target repository:
+### Step 1: Copy the `constitution/` Folder (or the 3 Files) into Your Project
+Copy the `constitution/` folder (containing `AGENT.md`, `PARKED.md`, and `UNFILTERED-AGENT.md`) into your target repository:
 
 ```bash
-cp AGENT.md PARKED.md UNFILTERED-AGENT.md /path/to/your-project/
+cp -r constitution/ /path/to/your-project/
 ```
 
 ### Step 2: Connect to Your AI Coding Tool
